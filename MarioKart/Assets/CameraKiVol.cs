@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target; // La voiture à suivre
-    public Vector3 offset = new Vector3(0, 10, 0); // Position relative de la caméra
+    public Vector3 offset = new Vector3(0, 0, 0); // Position relative de la caméra
     public float smoothSpeed = 5f; // Vitesse de suivi
 
     void LateUpdate()
