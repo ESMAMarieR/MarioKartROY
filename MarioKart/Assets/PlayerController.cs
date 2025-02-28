@@ -37,11 +37,11 @@ public class KartController : MonoBehaviour
             currentSpeed = slow;
             currentSpeed = -5f;
          //   currentSpeed = -speed;
-        }
-        else if (Input.GetKey(KeyCode.Space))
-        {
-            currentSpeed = stop;
-            //   currentSpeed = -speed;
+        //}
+        //else if (Input.GetKey(KeyCode.Space))
+        //{
+        //    currentSpeed = stop;
+        //    //   currentSpeed = -speed;
         }
         else
         {

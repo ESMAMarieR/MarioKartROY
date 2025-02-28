@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|d:\\gitroy\\mariokartroy\\mariokart\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\GitRoy\\MarioKartROY\\MarioKart\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Assets\\BonusBoxRadom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T12:16:05.538Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Assets\\PlayerController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T12:16:05.539Z"
             }
           ]
         }
