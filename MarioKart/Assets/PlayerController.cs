@@ -14,9 +14,11 @@ public class KartController : MonoBehaviour
     public float slow = -4f; //rallentissement du kart avant de reculer
     public float zoneboostMultiplier = 1f; //Multiplication vitesse de la zonne boost
     public float zoneboostDuration = 10f; //Le temps que le boost dure
+    public float originalspeed = 0;
 
     private bool HasBoostItem = false; //item inventaire cacher
-    //public LayerMask boostLayer;
+    public LayerMask boostLayer;
+ 
 
     private Rigidbody rb;
     private float currentSpeed = 0f;
@@ -29,11 +31,10 @@ public class KartController : MonoBehaviour
 
     void Update()
     {
-
         rb.AddForce(Vector3.down * 20f, ForceMode.Acceleration);
 
 
-        if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
         {
             currentSpeed = speed;
         }
@@ -50,12 +51,12 @@ public class KartController : MonoBehaviour
             currentSpeed = 0f;
         }
     }
-        if (HasBoostItem && Input.GetKeyDown(KeyCode.Space))
+        if (HasBoostItem = true && Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(ActivateBoost());
         }
 
-        // else if (HasBoostItem = false)Input.GetKeyDown(key: KeyCode.W);
+         //else if (HasBoostItem == true)Input.GetKeyDown(key: KeyCode.W);
         //currentSpeed = speed;
 
         // Safonctionne mais sa avance tout seul
@@ -80,12 +81,6 @@ public class KartController : MonoBehaviour
 
     }
 
-    /*public void ApplyBoxBoost() //box qui donnais un boost dés qu'on le traverse
-    {
-        {
-            StartCoroutine(BoostCoroutine());
-        }
-    }*/
     public void ItemBoostApply()
     {
         { 
@@ -93,6 +88,7 @@ public class KartController : MonoBehaviour
         }
 
     }
+
     private IEnumerator ActivateBoost()
     {
         float originalSpeed = currentSpeed;

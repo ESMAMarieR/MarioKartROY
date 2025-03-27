@@ -362,6 +362,7 @@
 "Assets/CameraKiVol.cs"
 "Assets/Null.cs"
 "Assets/PlayerController.cs"
+"Assets/RotateSpeedBox.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

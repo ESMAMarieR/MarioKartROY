@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitRoy\\MarioKartROY\\MarioKart\\",
+  "WorkspaceRootPath": "D:\\MarioKartROY\\MarioKart\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|d:\\gitroy\\mariokartroy\\mariokart\\assets\\lpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\lpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|d:\\mariokartroy\\mariokart\\assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\GitRoy\\MarioKartROY\\MarioKart\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\GitRoy\\MarioKartROY\\MarioKart\\assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\GitRoy\\MarioKartROY\\MarioKart\\assets\\camerakivol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\camerakivol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\camerakivol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\GitRoy\\MarioKartROY\\MarioKart\\assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\gitroy\\mariokartroy\\mariokart\\assets\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,75 +35,88 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LPManager.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\LPManager.cs",
-              "RelativeDocumentMoniker": "Assets\\LPManager.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\LPManager.cs",
-              "RelativeToolTip": "Assets\\LPManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "RotateSpeedBox.cs",
+              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\RotateSpeedBox.cs",
+              "RelativeDocumentMoniker": "Assets\\RotateSpeedBox.cs",
+              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\RotateSpeedBox.cs",
+              "RelativeToolTip": "Assets\\RotateSpeedBox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T15:05:43.82Z",
+              "WhenOpened": "2025-03-27T13:44:59.855Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CheckPoint.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\CheckPoint.cs",
-              "RelativeDocumentMoniker": "Assets\\CheckPoint.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\CheckPoint.cs",
-              "RelativeToolTip": "Assets\\CheckPoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T15:05:24.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\PlayerController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.539Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ZoneSpeed.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
+              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
               "RelativeDocumentMoniker": "Assets\\ZoneSpeed.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
+              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
               "RelativeToolTip": "Assets\\ZoneSpeed.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T14:31:50.97Z"
+              "WhenOpened": "2025-02-28T14:31:50.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CameraKiVol.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\CameraKiVol.cs",
+              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\CameraKiVol.cs",
               "RelativeDocumentMoniker": "Assets\\CameraKiVol.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\CameraKiVol.cs",
+              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\CameraKiVol.cs",
               "RelativeToolTip": "Assets\\CameraKiVol.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.406Z"
+              "WhenOpened": "2025-02-28T12:16:05.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "BonusBoxRadom.cs",
-              "DocumentMoniker": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\BonusBoxRadom.cs",
+              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\BonusBoxRadom.cs",
               "RelativeDocumentMoniker": "Assets\\BonusBoxRadom.cs",
-              "ToolTip": "D:\\GitRoy\\MarioKartROY\\MarioKart\\Assets\\BonusBoxRadom.cs",
+              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\BonusBoxRadom.cs",
               "RelativeToolTip": "Assets\\BonusBoxRadom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.538Z"
+              "WhenOpened": "2025-02-28T12:16:05.538Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "50b8bdcd-7644-481a-b778-06e473fc4963",
+        "Display": 0,
+        "X": 111,
+        "Y": 120,
+        "Width": 1044,
+        "Height": 870,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
+              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\PlayerController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:16:05.539Z",
+              "EditorCaption": ""
             }
           ]
         }
