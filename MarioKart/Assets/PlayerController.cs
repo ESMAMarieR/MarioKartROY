@@ -1,66 +1,62 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+using System.Collections;
 
 public class KartController : MonoBehaviour
 {
-    public GameObject BoostItem;
-    public float speed = 10f; //vitesse normal du kart
-    public float turnSpeed = 100f; //vitesse quand le kart tourne
-    public float friction = 0.98f; //rallentissement quand on touche plus S
-    public float boostMultiplier = 10.5f; //Multiple la vitesse
-    public float boostDuration = 10f; //Le temps que le boost dure
-    public float slow = -4f; //rallentissement du kart avant de reculer
-    public float zoneboostMultiplier = 1f; //Multiplication vitesse de la zonne boost
-    public float zoneboostDuration = 10f; //Le temps que le boost dure
-    public float originalspeed = 0;
-
-    private bool HasBoostItem = false; //item inventaire cacher
-    public LayerMask boostLayer;
- 
+    public Image BoostItemUI; // Image de l'item dans le Canvas
+    public float speed = 10f;
+    public float turnSpeed = 100f;
+    public float friction = 0.98f;
+    public float boostMultiplier = 2f;
+    public float boostDuration = 2f;
+    public float zoneboostMultiplier = 1.5f;
+    public float zoneboostDuration = 3f;
+    public float originalSpeed = 10f;
 
     private Rigidbody rb;
-    private float currentSpeed = 0f;
+    private float currentSpeed;
+    private bool isBoosting = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        BoostItem.SetActive(false);
+        currentSpeed = originalSpeed;
+
+        // Masquer l'UI du boost au début
+        BoostItemUI.gameObject.SetActive(false);
     }
 
     void Update()
     {
         rb.AddForce(Vector3.down * 20f, ForceMode.Acceleration);
 
-
+        if (!isBoosting)
+        {
             if (Input.GetKey(KeyCode.W))
-        {
-            currentSpeed = speed;
+            {
+                currentSpeed = speed;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                currentSpeed = -speed;
+            }
+            else
+            {
+                currentSpeed *= friction;
+            }
+
+            if (Mathf.Abs(currentSpeed) < 0.1f)
+            {
+                currentSpeed = 0f;
+            }
         }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            currentSpeed = -speed / 2;
-        }
-        else
-        {
-            currentSpeed *= friction;
-        
-        if (Mathf.Abs(currentSpeed) < 0.1f)
-        {
-            currentSpeed = 0f;
-        }
-    }
-        if (HasBoostItem = true && Input.GetKeyDown(KeyCode.Space))
+
+        // Activation du boost via Space uniquement si l'item est affiché dans le Canvas et qu'on avance
+        if (BoostItemUI.gameObject.activeSelf && Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(ActivateBoost());
         }
-
-         //else if (HasBoostItem == true)Input.GetKeyDown(key: KeyCode.W);
-        //currentSpeed = speed;
-
-        // Safonctionne mais sa avance tout seul
-
 
         float turn = 0f;
         if (Input.GetKey(KeyCode.A))
@@ -72,65 +68,47 @@ public class KartController : MonoBehaviour
             turn = 1f;
         }
 
-        //modif
-        //rb.AddForce(transform.forward * currentSpeed, ForceMode.Acceleration);
-
         rb.velocity = transform.forward * currentSpeed;
         transform.Rotate(Vector3.up * turn * turnSpeed * Time.deltaTime);
-
-
     }
 
-    public void ItemBoostApply()
+    // Fonction appelée pour récupérer l'item de boost et l'afficher dans le Canvas
+    public void PickUpBoostItem()
     {
-        { 
-            StartCoroutine(ActivateBoost());
-        }
-
+        BoostItemUI.gameObject.SetActive(true); // Affiche l'UI du boost
     }
 
+    // Boost activé uniquement si l'item est affiché dans le Canvas
     private IEnumerator ActivateBoost()
     {
+        BoostItemUI.gameObject.SetActive(false); // Cache l'UI après usage
+        isBoosting = true;
         float originalSpeed = currentSpeed;
-        HasBoostItem = false;
-        BoostItem.SetActive(false);
         currentSpeed *= boostMultiplier;
 
         yield return new WaitForSeconds(boostDuration);
         currentSpeed = originalSpeed;
+        isBoosting = false;
     }
 
+    // Détection des zones de boost
     public void ApplyZoneBoost()
     {
         StartCoroutine(BoostZoneCoroutine());
     }
 
+
     private IEnumerator BoostZoneCoroutine()
     {
-        float originalSpeed = currentSpeed;
-        currentSpeed *= zoneboostMultiplier;
+        if (Input.GetKey(KeyCode.W))
+        {
+            isBoosting = true;
+            float originalSpeed = currentSpeed;
+            currentSpeed *= zoneboostMultiplier;
 
-        yield return new WaitForSeconds(zoneboostDuration);
-        currentSpeed = originalSpeed;
+            yield return new WaitForSeconds(zoneboostDuration);
+            currentSpeed = originalSpeed;
+            isBoosting = false;
+        }
     }
-
-
-    /*private IEnumerator BoostCoroutine()
-    {
-        float originalSpeed = speed;
-        speed *= boostMultiplier;
-        yield return new WaitForSeconds(boostDuration);
-        speed = originalSpeed;
-
-
-        speed *= zoneboostMultiplier;
-        yield return new WaitForSeconds(zoneboostDuration);
-        speed = originalSpeed;
-    }*/
-
-
-
-
-
-
 }
