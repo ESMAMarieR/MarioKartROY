@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class KartController : MonoBehaviour
 {
-    public Image BoostItemUI; // Image de l'item dans le Canvas
-    public Image PowerSizeUp;
-    public Image PowerSizeDown;
+    public Image BoostItemUI; 
+    public Image PowerSizeUp; //grandi mais ranlenti
+    public Image PowerSizeDown; //reduit mais speed++
     public float speed = 10f;
     public float turnSpeed = 100f;
     public float friction = 0.98f;
@@ -24,7 +25,7 @@ public class KartController : MonoBehaviour
     public float itemSizeDOWNDuration = 3f;
 
     public float itemSizeUPModification = 0f;
-    public float itemSizeDOWNModification = 0f;
+
 
 
     private Rigidbody rb;
@@ -34,12 +35,19 @@ public class KartController : MonoBehaviour
     private bool isSizeUp = false;
     private bool isSizeDown = false;
 
+    public float groundCheckDistance = 1.0f; //pour que le kart ne decole pas du sol
+    public LayerMask groundLayer;
+
+    public Vector3 normalSize = new Vector3(1, 1, 1);
+    public Vector3 smallSize = new Vector3(0.5f, 0.5f, 0.5f);
+    public float itemSizeDOWNModification = 1.5f;
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
         currentSpeed = originalSpeed;
 
-        // Masquer l'UI du boost au début
+
         BoostItemUI.gameObject.SetActive(false);
         PowerSizeUp.gameObject.SetActive(false);//
         PowerSizeDown.gameObject.SetActive(false);//
@@ -48,6 +56,19 @@ public class KartController : MonoBehaviour
     void Update()
     {
         rb.AddForce(Vector3.down * 20f, ForceMode.Acceleration);
+
+        rb.AddForce(Vector3.down * 20f, ForceMode.Acceleration); 
+        if (Vector3.Dot(transform.up, Vector3.down) > 0.5f)
+        {
+            StartCoroutine(ResetKart());
+        }
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance, groundLayer)) //look si le kart est sur le sol
+        {
+
+            transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+        }
 
         if (!isBoosting && !isDebuf && !isSizeDown && !isSizeUp)
         {
@@ -81,9 +102,9 @@ public class KartController : MonoBehaviour
             StartCoroutine(ActivateSizeUP());//
         }
 
-        if (PowerSizeDown.gameObject.activeSelf && Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.Space))//
+        if (PowerSizeDown.gameObject.activeSelf && Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(ActivateSizeDown());//
+            StartCoroutine(ActivateSizeDown());
         }
 
 
@@ -117,10 +138,19 @@ public class KartController : MonoBehaviour
         PowerSizeDown.gameObject.SetActive(true); //
     }*/
 
-    // Boost activé uniquement si l'item est affiché dans le Canvas
+
+    private IEnumerator ResetKart() //pour retourner le kart si il est sur lui meme
+    {
+        yield return new WaitForSeconds(1f);
+        transform.position += Vector3.up * 2f;
+        transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
     private IEnumerator ActivateBoost()
     {
-        BoostItemUI.gameObject.SetActive(false); // Cache l'UI après usage
+        BoostItemUI.gameObject.SetActive(false);
         isBoosting = true;
         float originalSpeed = currentSpeed;
         currentSpeed *= boostMultiplier;
@@ -142,30 +172,33 @@ public class KartController : MonoBehaviour
         //isSizeUp = false;
     }
 
-    private IEnumerator ActivateSizeDown()//
+    private IEnumerator ActivateSizeDown()
     {
-        PowerSizeDown.gameObject.SetActive(false);
-        //isSizeDown = true;
+        PowerSizeDown.gameObject.SetActive(false); // Cache l'item après activation
+
+        // Change la taille et augmente la vitesse
+        transform.localScale = smallSize;
         float originalSpeed = currentSpeed;
         currentSpeed *= itemSizeDOWNModification;
 
         yield return new WaitForSeconds(itemSizeDOWNDuration);
+
+        // Retour à la taille et vitesse normales
+        transform.localScale = normalSize;
         currentSpeed = originalSpeed;
-        //isSizeDown = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("BoostZone")) // Zone de boost
+        if (other.CompareTag("BoostZone"))
         {
             ApplyZoneBoost();
         }
-        else if (other.CompareTag("DebufZone")) // Zone de ralentissement
+        else if (other.CompareTag("DebufZone"))
         {
             ApplyZoneDebuf();
         }
     }
-    // Détection des zones de boost
     public void ApplyZoneBoost()
     {
         StartCoroutine(BoostZoneCoroutine());
@@ -186,27 +219,6 @@ public class KartController : MonoBehaviour
         }
     }
 
-    /*public void ApplyZoneDebuf()
-    {
-        isDebuf = true;
-    }
-
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("DebufZone"))
-        {
-            isDebuf = true;
-            currentSpeed = speed * zonedebufMultiplier;
-        }
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("DebufZone"))
-        {
-            isDebuf = false;
-            currentSpeed = speed;
-        }
-    }*/
 
     public void ApplyZoneDebuf()
      {
