@@ -5,6 +5,8 @@ using System.Collections;
 public class KartController : MonoBehaviour
 {
     public Image BoostItemUI; // Image de l'item dans le Canvas
+    public Image PowerSizeUp;
+    public Image PowerSizeDown;
     public float speed = 10f;
     public float turnSpeed = 100f;
     public float friction = 0.98f;
@@ -13,10 +15,13 @@ public class KartController : MonoBehaviour
     public float zoneboostMultiplier = 1.5f;
     public float zoneboostDuration = 3f;
     public float originalSpeed = 10f;
+    public float zonedebufMultiplier = 0.5f;
+    public float zonedebufDuration = 3f;
 
     private Rigidbody rb;
     private float currentSpeed;
     private bool isBoosting = false;
+    private bool isDebuf = false;
 
     void Start()
     {
@@ -31,7 +36,7 @@ public class KartController : MonoBehaviour
     {
         rb.AddForce(Vector3.down * 20f, ForceMode.Acceleration);
 
-        if (!isBoosting)
+        if (!isBoosting && !isDebuf)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -91,6 +96,18 @@ public class KartController : MonoBehaviour
         isBoosting = false;
     }
 
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("BoostZone")) // Zone de boost
+        {
+            ApplyZoneBoost();
+        }
+        else if (other.CompareTag("DebufZone")) // Zone de ralentissement
+        {
+            ApplyZoneDebuf();
+        }
+    }*/
     // Détection des zones de boost
     public void ApplyZoneBoost()
     {
@@ -111,4 +128,45 @@ public class KartController : MonoBehaviour
             isBoosting = false;
         }
     }
+
+    /*public void ApplyZoneDebuf()
+    {
+        isDebuf = true;
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("DebufZone"))
+        {
+            isDebuf = true;
+            currentSpeed = speed * zonedebufMultiplier;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("DebufZone"))
+        {
+            isDebuf = false;
+            currentSpeed = speed;
+        }
+    }*/
+
+    public void ApplyZoneDebuf()
+     {
+         StartCoroutine(DebufZoneCoroutine());
+     }
+
+     private IEnumerator DebufZoneCoroutine()
+     {
+         if (Input.GetKey(KeyCode.W))
+         {
+             isDebuf = true;
+             float originalSpeed = currentSpeed;
+             currentSpeed -= zonedebufMultiplier;
+
+             yield return new WaitForSeconds(zonedebufDuration);
+             currentSpeed = originalSpeed;
+             isDebuf = false;
+         }
+     }
 }
