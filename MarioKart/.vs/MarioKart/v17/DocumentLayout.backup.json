@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\MarioKartROY\\MarioKart\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|d:\\mariokartroy\\mariokart\\assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\camerakivol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\camerakivol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\zonespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|D:\\MarioKartROY\\MarioKart\\assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\bonusboxradom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|d:\\mariokartroy\\mariokart\\assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC464817-F035-C662-7E8C-713824400579}|Assembly-CSharp.csproj|solutionrelative:assets\\rotatespeedbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RotateSpeedBox.cs",
               "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\RotateSpeedBox.cs",
               "RelativeDocumentMoniker": "Assets\\RotateSpeedBox.cs",
@@ -47,20 +43,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ZoneSpeed.cs",
               "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
               "RelativeDocumentMoniker": "Assets\\ZoneSpeed.cs",
               "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\ZoneSpeed.cs",
               "RelativeToolTip": "Assets\\ZoneSpeed.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T14:31:50.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CameraKiVol.cs",
               "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\CameraKiVol.cs",
               "RelativeDocumentMoniker": "Assets\\CameraKiVol.cs",
@@ -82,40 +78,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T12:16:05.538Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "50b8bdcd-7644-481a-b778-06e473fc4963",
-        "Display": 0,
-        "X": 111,
-        "Y": 120,
-        "Width": 1044,
-        "Height": 870,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
-              "ToolTip": "D:\\MarioKartROY\\MarioKart\\Assets\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\PlayerController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T12:16:05.539Z",
               "EditorCaption": ""
             }
           ]
